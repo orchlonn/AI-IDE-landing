@@ -118,17 +118,6 @@ function Hero() {
   return (
     <section className="relative mx-auto w-full max-w-6xl px-6 pt-24 pb-12 sm:pt-32 sm:pb-20">
       <div className="flex flex-col items-center text-center animate-float-up">
-        <a
-          href="#agents"
-          className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] py-1.5 pr-4 pl-1.5 text-xs text-muted backdrop-blur transition-colors hover:border-accent/30 hover:text-foreground"
-        >
-          <span className="rounded-full bg-accent/15 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-accent uppercase">
-            New
-          </span>
-          Multi-agent backend with RAG over your codebase
-          <ArrowRight className="h-3 w-3" />
-        </a>
-
         <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
           The AI-native IDE
           <br />

@@ -1,37 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI IDE — Landing Page
 
-## Getting Started
+Marketing site for the AI IDE project. Built with Next.js 16, Tailwind CSS v4, and the Geist font family.
 
-First, run the development server:
+This project sits alongside:
+
+- `ai-ide-frontend/` — the IDE itself (Next.js + Monaco + Supabase)
+- `ai-ide-backend/` — the FastAPI multi-agent backend (LangChain + Ollama + pgvector)
+
+## Prerequisites
+
+- Node.js 20+
+- npm
+
+## Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Development
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Production build
+npm run build
+npm start
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+## Lint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Structure
 
-## Deploy on Vercel
+```
+src/app/
+  layout.tsx     # Root layout, metadata, fonts
+  globals.css    # Theme tokens, grid background, animations
+  page.tsx       # Single-file landing page (nav, hero, IDE preview, features, agents, CTA, footer)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The landing page uses the same GitHub-dark palette as the IDE (`#08090c` background, `#58a6ff` accent, `#a371f7` purple) so the visual identity stays consistent across the marketing site and the product.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# AI-IDE-landing
+## Customizing
+
+- **CTAs**: the `Launch IDE` and `Launch the IDE` links in `page.tsx` use placeholder `#` hrefs. Point them at the deployed `ai-ide-frontend` URL.
+- **Colors**: tokens live at the top of `globals.css` under `:root` and are exposed to Tailwind via `@theme inline`.
+- **Sections**: each section in `page.tsx` is a small, named component — edit, reorder, or remove individually.

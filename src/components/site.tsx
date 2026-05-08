@@ -60,7 +60,7 @@ export function Nav({ active }: { active?: NavKey }) {
             Pricing
           </Link>
           <a
-            href="https://github.com"
+            href="https://github.com/AI-IDE-web"
             target="_blank"
             rel="noreferrer"
             className="text-muted transition-colors hover:text-foreground"
@@ -117,7 +117,7 @@ export function Footer() {
             Pricing
           </Link>
           <a
-            href="https://github.com"
+            href="https://github.com/AI-IDE-web"
             target="_blank"
             rel="noreferrer"
             className="transition-colors hover:text-foreground"

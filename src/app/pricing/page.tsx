@@ -76,7 +76,7 @@ const FEATURES = [
 
 export default function PricingPage() {
   return (
-    <main className="relative w-full overflow-x-hidden">
+    <main className="relative w-full overflow-x-clip">
       <BackgroundFx />
       <Nav active="pricing" />
 
@@ -142,7 +142,7 @@ function PlanCard({ plan }: { plan: Plan }) {
     <div
       className={`relative flex flex-col rounded-2xl border p-7 transition-all ${
         recommended
-          ? "gradient-border border-transparent bg-panel shadow-[0_30px_80px_-20px_rgba(88,166,255,0.35)] lg:-translate-y-3 lg:scale-[1.03]"
+          ? "gradient-border border-transparent bg-panel shadow-[0_30px_80px_-20px_rgba(88,166,255,0.35)] lg:scale-[1.03]"
           : "border-white/[0.06] bg-panel hover:border-white/10 hover:bg-white/[0.02]"
       }`}
     >
@@ -189,7 +189,9 @@ function PlanCard({ plan }: { plan: Plan }) {
         )}
       </p>
 
-      <p className="mt-4 text-sm leading-relaxed text-muted">{plan.blurb}</p>
+      <p className="mt-4 min-h-[2lh] text-sm leading-relaxed text-muted">
+        {plan.blurb}
+      </p>
 
       <Link
         href="#"
@@ -348,7 +350,7 @@ function FinalCTA() {
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
           <Link
-            href="https://github.com"
+            href="https://github.com/AI-IDE-web"
             className="flex h-11 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-6 text-sm font-medium transition-colors hover:border-white/20 hover:bg-white/[0.06]"
           >
             <GitHubIcon className="h-4 w-4" />

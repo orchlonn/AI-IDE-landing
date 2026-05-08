@@ -9,7 +9,7 @@ import {
 
 export default function Home() {
   return (
-    <main className="relative w-full overflow-x-hidden">
+    <main className="relative w-full overflow-x-clip">
       <BackgroundFx />
       <Nav />
       <Hero />
@@ -683,7 +683,7 @@ function FinalCTA() {
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
           <Link
-            href="https://github.com"
+            href="https://github.com/AI-IDE-web"
             className="flex h-11 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-6 text-sm font-medium transition-colors hover:border-white/20 hover:bg-white/[0.06]"
           >
             <GitHubIcon className="h-4 w-4" />
